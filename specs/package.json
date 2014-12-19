@@ -1,0 +1,10 @@
+{
+    "name": "phprest-project-tester",
+    "author": "Adam Balogh",
+    "main": "specs/bootstrap.js",
+    "version": "0.0.1",
+    "dependencies": {
+        "frisby": "0.8.3",
+        "jasmine-node": "1.14.5"
+    }
+}

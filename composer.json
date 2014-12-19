@@ -1,0 +1,28 @@
+{
+    "name": "phprest/phprest-sample-heroku-app",
+    "description": "Phprest Sample Heroku App.",
+    "keywords": ["phprest", "rest", "restful", "framework", "heroku"],
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Adam Balogh",
+            "email": "baloghbh@gmail.com"
+        }
+    ],
+    "require": {
+        "phprest/phprest": "dev-master",
+        "phprest/phprest-service-request-filter": "dev-master",
+        "phprest/phprest-service-validator": "dev-master",
+        "phprest/phprest-service-orm": "dev-master",
+        "zircote/swagger-php": "~0.9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Api\\": "api",
+            "App\\": "app"
+        }
+    },
+    "minimum-stability" : "dev",
+    "prefer-stable" : true
+}
