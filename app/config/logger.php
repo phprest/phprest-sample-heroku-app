@@ -4,7 +4,7 @@ use Phprest\Service\Logger\Config as LoggerConfig;
 use Phprest\Service\Logger\Service as LoggerService;
 use Monolog\Handler\StreamHandler;
 
-$loggerHandlers[] = new StreamHandler(__DIR__ . '/../storage/log', \Monolog\Logger::DEBUG);
+$loggerHandlers[] = new StreamHandler('php://stderr', \Monolog\Logger::DEBUG);
 
 /** @var \Phprest\Config $config */
 
