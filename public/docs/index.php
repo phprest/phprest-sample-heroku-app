@@ -28,7 +28,7 @@
       if (url && url.length > 1) {
         url = url[1];
       } else {
-        url = "http://phprest.herokuapp.com/docs/jsondata/api-docs.json";
+        url = "http://<?=htmlspecialchars($_SERVER['HTTP_HOST'])?>/docs/jsondata/api-docs.json.php";
       }
       window.swaggerUi = new SwaggerUi({
         url: url,
