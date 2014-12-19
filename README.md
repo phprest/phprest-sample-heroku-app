@@ -3,6 +3,8 @@
 [![Author](http://img.shields.io/badge/author-@adammbalogh-blue.svg?style=flat-square)](https://twitter.com/adammbalogh)
 [![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 # Demo
 
 [phprest.herokuapp.com/docs](http://phprest.herokuapp.com/docs)
@@ -26,6 +28,5 @@ curl -X GET --header "Accept: */*" phprest.herokuapp.com/camera
 * `heroku create yourappname`
 * `heroku addons:add cleardb:ignite`
 * `git push heroku master`
-* `heroku run vendor/bin/phprest-service-orm migrations:migrate`
-* `heroku run vendor/bin/phprest-service-orm fixtures:set`
+* `heroku run composer init-phprest-sample`
 

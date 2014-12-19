@@ -1,0 +1,12 @@
+{
+    "name": "Phprest Sample Heroku App",
+    "description": "Phprest Sample Project as a Heroku App",
+    "repository": "https://github.com/phprest/phprest-sample-heroku-app",
+    "keywords": ["php", "rest", "framework"],
+    "addons": [
+        "cleardb:ignite"
+    ],
+    "scripts": {
+        "postdeploy": "composer init-phprest-sample"
+    }
+}
