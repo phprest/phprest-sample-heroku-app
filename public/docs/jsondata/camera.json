@@ -1,0 +1,85 @@
+{
+    "basePath": "/",
+    "swaggerVersion": "1.2",
+    "apiVersion": "0.1",
+    "resourcePath": "/camera",
+    "apis": [
+        {
+            "path": "/camera",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets the camera",
+                    "nickname": "get",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "accept",
+                            "type": "string",
+                            "required": false
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Not Found"
+                        },
+                        {
+                            "code": 200,
+                            "message": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "method": "POST",
+                    "summary": "State transition for camera",
+                    "nickname": "post",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "transition",
+                            "type": "string",
+                            "required": true,
+                            "description": "on,off"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "accept",
+                            "type": "string",
+                            "required": false
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Bad Request"
+                        },
+                        {
+                            "code": 200,
+                            "message": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "method": "OPTIONS",
+                    "summary": "Gets allowed methods on the camera",
+                    "nickname": "options",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "accept",
+                            "type": "string",
+                            "required": false
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 200,
+                            "message": "Ok"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

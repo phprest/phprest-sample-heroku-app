@@ -1,0 +1,207 @@
+{
+    "basePath": "/",
+    "swaggerVersion": "1.2",
+    "apiVersion": "0.1",
+    "resourcePath": "/temperatures",
+    "apis": [
+        {
+            "path": "/temperatures",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets temperatures",
+                    "nickname": "getAll",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "page",
+                            "type": "integer",
+                            "defaultValue": 1
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "limit",
+                            "type": "integer",
+                            "required": false,
+                            "defaultValue": 20
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "query",
+                            "type": "string",
+                            "description": "field1<=100,field2=value",
+                            "defaultValue": "value>-10"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "sort",
+                            "type": "string",
+                            "required": false,
+                            "description": "field1,-field2",
+                            "defaultValue": "-created"
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "accept",
+                            "type": "string",
+                            "required": false
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Not Found"
+                        },
+                        {
+                            "code": 400,
+                            "message": "Bad Request"
+                        },
+                        {
+                            "code": 200,
+                            "message": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "method": "POST",
+                    "summary": "Creates a new temperature",
+                    "nickname": "post",
+                    "parameters": [
+                        {
+                            "paramType": "body",
+                            "type": "body",
+                            "required": true
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "accept",
+                            "type": "string",
+                            "required": false
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 422,
+                            "message": "Unprocessable Entity"
+                        },
+                        {
+                            "code": 201,
+                            "message": "Created"
+                        }
+                    ]
+                },
+                {
+                    "method": "OPTIONS",
+                    "summary": "Gets allowed methods on temperatures",
+                    "nickname": "optionsAll",
+                    "parameters": [
+                        {
+                            "paramType": "header",
+                            "name": "accept",
+                            "type": "string",
+                            "required": false
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 200,
+                            "message": "Ok"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/temperatures/{id}",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a temperature",
+                    "nickname": "get",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "type": "integer",
+                            "required": true
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "accept",
+                            "type": "string",
+                            "required": false
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Not Found"
+                        },
+                        {
+                            "code": 200,
+                            "message": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "method": "DELETE",
+                    "summary": "Deletes a temperature",
+                    "nickname": "delete",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "type": "integer",
+                            "required": true
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "accept",
+                            "type": "string",
+                            "required": false
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Not Found"
+                        },
+                        {
+                            "code": 204,
+                            "message": "No Content"
+                        }
+                    ]
+                },
+                {
+                    "method": "OPTIONS",
+                    "summary": "Gets allowed methods on a temperature",
+                    "nickname": "options",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "type": "integer",
+                            "required": true
+                        },
+                        {
+                            "paramType": "header",
+                            "name": "accept",
+                            "type": "string",
+                            "required": false
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 404,
+                            "message": "Not Found"
+                        },
+                        {
+                            "code": 200,
+                            "message": "Ok"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
