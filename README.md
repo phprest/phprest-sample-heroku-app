@@ -20,14 +20,12 @@ curl -X GET --header "Accept: */*" phprest.herokuapp.com/camera
 # Installation
 
 * Install [Heroku Toolbelt](https://toolbelt.heroku.com)
-* ```heroku login```
-* ```heroku create yourappname```
-* ```heroku addons:add --app yourappname cleardb:ignite```
-* ```git clone https://github.com/phprest/phprest-sample-heroku-app.git```
-* ```cd phprest-sample-heroku-app```
-* ```heroku git:remote -a yourappname```
-* ```git push heroku master```
-* ```heroku run bash```
- * ```vendor/bin/phprest-service-orm migrations:migrate```
- * ```vendor/bin/phprest-service-orm fixtures:set```
+* `heroku login`
+* `git clone https://github.com/phprest/phprest-sample-heroku-app.git`
+* `cd phprest-sample-heroku-app`
+* `heroku create yourappname`
+* `heroku addons:add cleardb:ignite`
+* `git push heroku master`
+* `heroku run vendor/bin/phprest-service-orm migrations:migrate`
+* `heroku run vendor/bin/phprest-service-orm fixtures:set`
 
