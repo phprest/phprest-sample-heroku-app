@@ -33,7 +33,6 @@ function getApplicationConfig($vendor, $apiVersion, array $paths)
 {
     $config = new \Phprest\Config($vendor, $apiVersion, true);
 
-    require_once $paths['config.api_version_handler'];
     require_once $paths['config.logger'];
 
     return $config;
