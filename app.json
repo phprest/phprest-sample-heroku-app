@@ -8,5 +8,6 @@
     ],
     "scripts": {
         "postdeploy": "composer init-phprest-sample"
-    }
+    },
+    "success_url": "/docs/"
 }
